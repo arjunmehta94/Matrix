@@ -101,11 +101,7 @@ public class Matrix{
 			System.out.println("Inverse: ");
 			System.out.println(Inverse.inverse(m));
 		}
-		//System.out.println(m.matrix[0]);
 
-		// for(int i = 0; i<width; i++){
-		// 	System.out.print(m.matrix[0][i].getValue()+"\t");
-		// }
 		Scanner in3 = new Scanner(System.in);
 		Scanner in4 = new Scanner(System.in);
 		System.out.println("Enter the width:");
@@ -131,12 +127,6 @@ public class Matrix{
 		System.out.println(MatrixAlgebra.subtract(m, m1));
 		System.out.println("Product: ");
 		System.out.println(MatrixAlgebra.multiply(m,m1));
-
-		// System.out.println(Determinant.determinant(m));
-		// System.out.println(Determinant.transposeMatrix(m));
-		// //System.out.println(MatrixAlgebra.multiply(m, Determinant.transposeMatrix(Determinant.cofactorMatrix(m))));
-		// System.out.println(Inverse.inverse(m));
-		// System.out.println(MatrixAlgebra.multiply(m, Inverse.inverse(m)));
 
 	}
 
