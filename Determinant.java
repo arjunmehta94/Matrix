@@ -59,10 +59,10 @@ public class Determinant{
 	}
 
 	public static Matrix transposeMatrix(Matrix a){
-		Matrix result = new Matrix(a.getWidth(), a.getHeight());
-		for(int j = 0; j<a.getHeight(); j++){
-			for(int i = 0; i<a.getWidth(); i++){
-				result.setValueAt(i, j, a.getValueAt(j, i));
+		Matrix result = new Matrix(a.getHeight(), a.getWidth());
+		for(int col = 0; col<a.getHeight(); col++){
+			for(int row = 0; row<a.getWidth(); row++){
+				result.setValueAt(col, row, a.getValueAt(row, col));
 			}
 		}
 		return result;

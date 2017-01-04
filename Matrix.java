@@ -90,31 +90,53 @@ public class Matrix{
 		System.out.println("Enter the height:");
 		int height = in2.nextInt();
 		Matrix m = new Matrix(width, height);
-		//System.out.println(m.matrix[0][0]);
 		m.SetUp();
+		System.out.println("Matrix 1: ");
+		System.out.println(m);
+		System.out.println("Transpose: ");
+		System.out.println(Determinant.transposeMatrix(m));
+		if (m.isSquareMatrix()) {
+			System.out.println("Determinant: ");
+			System.out.println(Determinant.determinant(m));
+			System.out.println("Inverse: ");
+			System.out.println(Inverse.inverse(m));
+		}
 		//System.out.println(m.matrix[0]);
 
 		// for(int i = 0; i<width; i++){
 		// 	System.out.print(m.matrix[0][i].getValue()+"\t");
 		// }
-		// Scanner in3 = new Scanner(System.in);
-		// Scanner in4 = new Scanner(System.in);
-		// System.out.println("Enter the width:");
-		// int width1 = in3.nextInt();
-		// System.out.println("Enter the height:");
-		// int height1 = in4.nextInt();
-		// Matrix m1 = new Matrix(width1, height1);
-		// m1.SetUp();
-		System.out.println(m);
-		// System.out.println(m1);
-		// System.out.println(MatrixAlgebra.add(m, m1));
-		// System.out.println(MatrixAlgebra.multiply(m,m1));
+		Scanner in3 = new Scanner(System.in);
+		Scanner in4 = new Scanner(System.in);
+		System.out.println("Enter the width:");
+		int width1 = in3.nextInt();
+		System.out.println("Enter the height:");
+		int height1 = in4.nextInt();
+		Matrix m1 = new Matrix(width1, height1);
+		m1.SetUp();
+		System.out.println("Matrix 2: ");
+		System.out.println(m1);
+		System.out.println("Transpose: ");
+		System.out.println(Determinant.transposeMatrix(m1));
+		if (m1.isSquareMatrix()) {
+			System.out.println("Determinant: ");
+			System.out.println(Determinant.determinant(m1));
+			System.out.println("Inverse: ");
+			System.out.println(Inverse.inverse(m1));
+		}
 
-		System.out.println(Determinant.determinant(m));
-		System.out.println(Determinant.transposeMatrix(m));
-		//System.out.println(MatrixAlgebra.multiply(m, Determinant.transposeMatrix(Determinant.cofactorMatrix(m))));
-		System.out.println(Inverse.inverse(m));
-		System.out.println(MatrixAlgebra.multiply(m, Inverse.inverse(m)));
+		System.out.println("Sum: ");
+		System.out.println(MatrixAlgebra.add(m, m1));
+		System.out.println("Difference: ");
+		System.out.println(MatrixAlgebra.subtract(m, m1));
+		System.out.println("Product: ");
+		System.out.println(MatrixAlgebra.multiply(m,m1));
+
+		// System.out.println(Determinant.determinant(m));
+		// System.out.println(Determinant.transposeMatrix(m));
+		// //System.out.println(MatrixAlgebra.multiply(m, Determinant.transposeMatrix(Determinant.cofactorMatrix(m))));
+		// System.out.println(Inverse.inverse(m));
+		// System.out.println(MatrixAlgebra.multiply(m, Inverse.inverse(m)));
 
 	}
 

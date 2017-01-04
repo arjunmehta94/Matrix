@@ -5,7 +5,7 @@ public class MatrixAlgebra{
 	}
 
 	public static boolean widthAndHeight(Matrix a, Matrix b){
-		return a.getWidth() == b.getHeight();
+		return a.getHeight() == b.getWidth();
 	}
 
 	public static Matrix add(Matrix a, Matrix b){
@@ -50,7 +50,7 @@ public class MatrixAlgebra{
 	}
 	public static Matrix multiply(Matrix a, Matrix b){
 		if(widthAndHeight(a, b)){
-			Matrix result = new Matrix(a.getHeight(), b.getWidth());
+			Matrix result = new Matrix(a.getWidth(), b.getHeight());
 			for(int i = 0; i<result.getWidth(); i++){
 				for(int j = 0; j<result.getHeight(); j++){
 					result.setValueAt(i, j, dotProduct(a.getRow(i), b.getCol(j)));
